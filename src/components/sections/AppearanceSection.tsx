@@ -8,7 +8,7 @@ interface AppearanceSectionProps {
   isGlassmorphism: boolean;
   setIsGlassmorphism: (enabled: boolean) => void;
   activeEffects: string[];
-  setActiveEffects: (effects: string[]) => void;
+  setActiveEffects: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const AppearanceSection: React.FC<AppearanceSectionProps> = ({
