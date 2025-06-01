@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,55 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)', opacity: '0' },
+					'50%': { transform: 'translateY(-100px) rotate(180deg)', opacity: '1' }
+				},
+				'fade-in': {
+					'to': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'enter': {
+					'from': { opacity: '0', transform: 'scale(0.9) translateY(20px)' },
+					'to': { opacity: '1', transform: 'scale(1) translateY(0)' }
+				},
+				'shine': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'sparkle': {
+					'0%, 100%': { transform: 'rotate(0deg) scale(1)' },
+					'50%': { transform: 'rotate(180deg) scale(1.1)' }
+				},
+				'gradient': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float infinite ease-in-out',
+				'fade-in': 'fade-in 0.4s ease-out forwards',
+				'enter': 'enter 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+				'shine': 'shine 3s infinite',
+				'sparkle': 'sparkle 2s infinite ease-in-out',
+				'gradient': 'gradient 3s ease infinite'
+			},
+			spacing: {
+				'0.75': '0.1875rem',
+				'1.5': '0.375rem',
+				'2.25': '0.5625rem',
+				'4.5': '1.125rem',
+				'5.5': '1.375rem',
+				'6.75': '1.6875rem',
+				'13': '3.25rem'
+			},
+			scale: {
+				'120': '1.2'
+			},
+			backgroundSize: {
+				'400': '400% 400%'
 			}
 		}
 	},
